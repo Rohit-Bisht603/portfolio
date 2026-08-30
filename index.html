@@ -119,10 +119,10 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
 .arena.open .arena-body{grid-template-rows:1fr}
 .arena-inner{overflow:hidden;min-height:0;display:grid;grid-template-columns:1fr auto;gap:2rem;padding-left:6rem}
 .arena.open .arena-inner{padding-bottom:2.2rem;padding-top:.2rem}
-.a-list{list-style:none;max-width:640px}
+.a-list{list-style:none;max-width:640px;min-width:0}
 .a-list li{font-family:var(--mono);font-size:12.5px;line-height:1.75;color:var(--ink2);padding:.32rem 0}
 .a-list li::before{content:'—';color:var(--accent);margin-right:.8em}
-.a-foot{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink2);align-self:end;white-space:nowrap;display:flex;align-items:center}
+.a-foot{font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--ink2);align-self:end;white-space:nowrap;display:flex;align-items:center;min-width:0}
 .a-foot::before{content:'';width:7px;height:7px;background:var(--accent);margin-right:.8em;flex:none}
 .margin-note{margin-top:5rem;display:flex;gap:1.6rem;border-left:2px solid var(--accent);padding:.4rem 0 .4rem 1.8rem;max-width:860px}
 .mn-star{font-style:italic;color:var(--accent);font-size:2.2rem;line-height:1}
@@ -252,12 +252,12 @@ body::before{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;
 .reveal.in{opacity:1;transform:none}
 
 /* ---------- responsive ---------- */
-@media (max-width:1020px){.a-spark{display:none}.arena-head{grid-template-columns:3rem 1fr max-content 2.4rem;gap:1.2rem}}
+@media (max-width:1020px){.a-spark{display:none}.arena-head{grid-template-columns:3rem 1fr max-content 2.4rem;gap:1.2rem}.a-foot{white-space:normal;justify-self:start;text-align:left}}
 @media (max-width:900px){
   .hero-bottom{flex-direction:column;align-items:flex-start;gap:2rem}
   .hero-meta{align-self:flex-start;text-align:left}
   .hero-side{max-width:560px}
-  .arena-inner{grid-template-columns:1fr;padding-left:4.4rem}
+  .arena-inner{grid-template-columns:1fr;padding-left:1.2rem}
   .fn-row{grid-template-columns:110px 1fr;grid-template-rows:auto auto}
   .fn-role{grid-column:1/-1}
   .ledger-row,.ledger-row:nth-child(even){grid-template-columns:1fr;grid-template-areas:"idx" "num" "meta"}
