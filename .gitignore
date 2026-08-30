@@ -1,0 +1,10 @@
+# local working copy — not part of the deployed site
+index.txt
+
+# python
+__pycache__/
+*.pyc
+
+# os junk
+.DS_Store
+Thumbs.db
